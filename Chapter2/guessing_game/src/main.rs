@@ -1,9 +1,12 @@
 use std::io; //The io library comes from the standard library (which is known as io),
             //it provides many useful features, includeing accepting inputs
-
+use rand::Rng;
 
 fn main() {//empty parenthesies shown that there are no inputs
     println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..101);
+    println!("The secret number is: {}", secret_number);
 
     println!("Please input your guess.");
 
